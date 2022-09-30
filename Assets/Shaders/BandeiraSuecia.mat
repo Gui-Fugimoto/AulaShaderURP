@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShaderMat
-  m_Shader: {fileID: 4800000, guid: ecd4253f3d134a64da921fdba9902596, type: 3}
+  m_Name: BandeiraSuecia
+  m_Shader: {fileID: 4800000, guid: ececcf4430058c74da1041fcf61475e2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

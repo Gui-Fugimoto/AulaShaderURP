@@ -1,4 +1,4 @@
-Shader "PUCNewShader"
+Shader "BandeiraArgentina"
 {
     Properties
     {
@@ -34,8 +34,9 @@ Shader "PUCNewShader"
                     Varyings Output;
 
                     Output.positionVAR = TransformObjectToHClip(Input.position.xyz);
+                    //Output.uvVAR = Input.uv;
                     Output.uvVAR = Input.uv;
-
+                    Output.uvVAR.x = length(float2(Input.uv.x * 1.667, Input.uv.y) - float2(0.83, 0.5));
                     //Output.positionVAR = Input.position;
 
                     return Output;
@@ -43,8 +44,18 @@ Shader "PUCNewShader"
                 float4 frag(Varyings Input) :SV_TARGET
                 {
                     float4 color = float4(0,1,0,1);
-                    if (Input.uvVAR.y > 0.5) {
-                         color = float4(1,0,0,1);
+
+                    if (Input.uvVAR.y > 0.0)
+                    {
+                        color = float4(0, 0.6, 1, 1);
+                    }
+                    if (Input.uvVAR.y > 0.3 && Input.uvVAR.y < 0.7) 
+                    {
+                        color = float4(1, 1, 1, 1);
+                    }
+                    if (Input.uvVAR.x < 0.13)
+                    {
+                        color = float4(1, 0.75, 0, 1);
                     }
 
                     return color;
